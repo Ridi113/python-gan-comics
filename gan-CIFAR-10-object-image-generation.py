@@ -17,6 +17,7 @@ from keras.layers import Dropout
 from keras.layers import LeakyReLU
 from keras.layers import Conv2DTranspose
 from matplotlib import pyplot
+import NamedEntityMatching as NER
 
 
 #link to the lecture where this code is from
@@ -362,6 +363,12 @@ gan_model.summary()
 # plot gan model
 # plot_model(gan_model, to_file='gan_plot.png', show_shapes=True, show_layer_names=True)
 # load image data
-dataset = load_real_samples("airplane")
+#This is a dummy example to demonstrate how the named entity recognizer will communicate with
+#image generator. This is very rudimentary and will be updated later.
+#TODO: thorough readup of the spacy library
+#https://spacy.io/
+objects = NER.extract_objects()
+objects[0] = 'frog'
+dataset = load_real_samples(objects[0])
 # train model
-train(g_model, d_model, gan_model, dataset, latent_dim)
+# train(g_model, d_model, gan_model, dataset, latent_dim)
