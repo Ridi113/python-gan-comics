@@ -17,7 +17,10 @@ from keras.layers import Dropout
 from keras.layers import LeakyReLU
 from keras.layers import Conv2DTranspose
 from matplotlib import pyplot
+<<<<<<< HEAD
 import NamedEntityMatching as NER
+=======
+>>>>>>> 14ecd7a7094fda4cd9eb1bec8b25b80af54c9657
 
 
 #link to the lecture where this code is from
